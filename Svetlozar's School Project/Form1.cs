@@ -43,8 +43,8 @@ namespace Svetlozar_s_School_Project
             {
 
                 Random rnd = new Random();
-                Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
-                Pen randomPen = new Pen(randomColor, 4);
+                Color random = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                Pen randomPen = new Pen(random, 4);
                 int n = new Random().Next(20, 170);
                 PointF point1 = new PointF(new Random().Next(200, this.Width) + new Random().Next(20, 170), new Random().Next(0, this.Height - 50) + new Random().Next(20, 170));
                 PointF point2 = new PointF(new Random().Next(200, this.Width) + new Random().Next(20, 170), new Random().Next(0, this.Height - 50) + new Random().Next(20, 170));
@@ -66,10 +66,10 @@ namespace Svetlozar_s_School_Project
             for (int i = 0; i < randomNum; i++)
             {
                     Random rnd = new Random();
-                    Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                    Color random = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
                     int b = new Random().Next(20, 170);
                     int n = new Random().Next(20, 170);
-                    this.CreateGraphics().DrawRectangle(new Pen(randomColor, 4), new Rectangle(new Random().Next(200, this.Width), new Random().Next(0, this.Height - 50), n, b));
+                    this.CreateGraphics().DrawRectangle(new Pen(random, 4), new Rectangle(new Random().Next(200, this.Width), new Random().Next(0, this.Height - 50), n, b));
                     Thread.Sleep(3000);
             }
         }
@@ -79,9 +79,9 @@ namespace Svetlozar_s_School_Project
             for (int i = 0; i < randomNum; i++)
             {    
                     Random rnd = new Random();
-                    Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                    Color random = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
                     int n = new Random().Next(20, 170);
-                    this.CreateGraphics().DrawEllipse(new Pen(randomColor, 4), new Random().Next(200, this.Width), new Random().Next(0, this.Height - 50), n, n);
+                    this.CreateGraphics().DrawEllipse(new Pen(random, 4), new Random().Next(200, this.Width), new Random().Next(0, this.Height - 50), n, n);
 
                     Thread.Sleep(4000);
                 }
