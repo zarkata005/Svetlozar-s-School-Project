@@ -32,7 +32,8 @@ namespace Svetlozar_s_School_Project
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Thread thread3 = new Thread(Circle);
+            thread3.Start();
         }
         public void Triangle()
         {
@@ -72,5 +73,18 @@ namespace Svetlozar_s_School_Project
                     Thread.Sleep(3000);
             }
         }
-    }
+        public void Circle()
+        {
+            int randomNum = new Random().Next(1, 100);
+            for (int i = 0; i < randomNum; i++)
+            {    
+                    Random rnd = new Random();
+                    Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                    int n = new Random().Next(20, 170);
+                    this.CreateGraphics().DrawEllipse(new Pen(randomColor, 4), new Random().Next(200, this.Width), new Random().Next(0, this.Height - 50), n, n);
+
+                    Thread.Sleep(4000);
+                }
+            }
+        }
 }
